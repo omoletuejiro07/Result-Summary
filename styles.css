@@ -1,0 +1,233 @@
+:root {
+  /* Colors */
+  --Light: hsl(0, 100%, 67%);
+  --Orange: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue-bg: hsl(252, 100%, 67%);
+  --Light-royal-blue-bg: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0.731);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --gray: #808080;
+  --border-radius: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card base styles */
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--White);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  max-width: 375px;
+  width: 100%;
+}
+
+.card-left {
+  background: linear-gradient(var(--Light-slate-blue-bg), var(--Light-royal-blue-bg));
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.result-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  opacity: 0.7;
+  font-weight: bold;
+
+}
+
+/* Score circle */
+.score-area {
+  background: linear-gradient(
+  to bottom,
+  hsla(256, 72%, 46%, 1) 0%,
+  hsla(241, 72%, 46%, 0) 100%);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.score-sub {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.result-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.result-dis {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.7;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Right section */
+.card-right {
+  padding: 2rem 1.5rem;
+}
+
+#summary-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.summary-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-score {
+  color: var(--Dark-gray-blue);
+  font-weight: bold;
+}
+
+.item-max {
+  color: var(--gray);
+}
+
+/* Category coloring */
+.summary-item.reaction {
+  background: hsl(0, 100%, 96%);
+  color: var(--Light);
+}
+.summary-item.memory {
+  background: hsl(39, 100%, 96%);
+  color: var(--Orange);
+}
+.summary-item.verbal {
+  background: hsl(166, 100%, 96%);
+  color: var(--Green-teal);
+}
+.summary-item.visual {
+  background: hsl(234, 85%, 96%);
+  color: var(--Cobalt-blue);
+}
+
+.continue-btn {
+  background: var(--Dark-gray-blue);
+  color: var(--White);
+  border: none;
+  padding: 1rem 0;
+  width: 100%;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.continue-btn:hover {
+  background: hsl(224, 30%, 20%);
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1440px;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  .summary-card {
+    flex-direction: row;
+    max-width: 700px;
+    width: 100%;
+    min-height: 420px;
+  }
+  .card-left, .card-right {
+    flex: 1 1 50%;
+    padding: 2.5rem;
+  }
+  .score-area {
+    width: 140px;
+    height: 140px;
+  }
+  .result-title {
+    font-size: 2rem;
+  }
+}
+
+/* For 375px devices */
+@media screen and (max-width: 375px) {
+  .summary-card {
+    max-width: 375px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .container {
+    padding: 0;
+  }
+  .card-left, .card-right {
+    padding: 1.5rem 1rem;
+  }
+
+  .result-dis {
+    max-width: none;
+  }
+
+}

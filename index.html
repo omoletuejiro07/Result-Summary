@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Images/favicon-32x32.png" type="image/x-icon">
+  <title>Result Summary</title>
+</head>
+<body>
+  <main class="container">
+    <section class="summary-card" role="region" aria-label="Results summary card">
+      <div class="card-left">
+        <header class="result-header">
+          <h3>Your Result</h3>
+        </header>
+        <div class="score-area">
+          <span class="score-number">76</span>
+          <span class="score-sub">of 100</span>
+        </div>
+        <div class="result-text">
+          <h3 class="result-title">Great</h3>
+          <p class="result-dis">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </div>
+      <aside class="card-right" aria-labelledby="summary-heading">
+        <h3 id="summary-heading">Summary</h3>
+        <ul class="summary-list">
+          <li class="summary-item reaction">
+            <span class="item-name" ><img src="Images/icon-reaction.svg" alt="Reaction Icon" class="item-icon">Reaction</a></span>
+            <span class="item-score">80 <span class="item-max">/ 100</span></span>
+          </li>
+          <li class="summary-item memory">
+            <span class="item-name"><img src="Images/icon-memory.svg" alt="Reaction Icon" class="item-icon">Memory</span>
+            <span class="item-score">92 <span class="item-max">/ 100</span></span>
+          </li>
+          <li class="summary-item verbal">
+            <span class="item-name"><img src="Images/icon-verbal.svg" alt="Reaction Icon" class="item-icon">Verbal</span>
+            <span class="item-score">61 <span class="item-max">/ 100</span></span>
+          </li>
+          <li class="summary-item visual">
+            <span class="item-name"><img src="Images/icon-visual.svg" alt="Reaction Icon" class="item-icon">Visual</span>
+            <span class="item-score">73 <span class="item-max">/ 100</span></span>
+          </li>
+        </ul>
+        <button type="button" class="continue-btn">Continue</button>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
